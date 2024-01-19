@@ -1,0 +1,12 @@
+{
+  "name": "Body Card A",
+  "type": "custom.card_a",
+  "sections": {
+    "card-continue": {
+      "type": "card-continue"
+    }
+  },
+  "order": [
+    "card-continue"
+  ]
+}
