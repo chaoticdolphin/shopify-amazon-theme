@@ -3,9 +3,37 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-deep-slider.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .deep-slider-section {
+    margin-bottom: -60rem;
+    position: relative;
+    z-index: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(227, 230, 230, 0) 0%,
+      rgba(227, 230, 230, 1) 38%,
+      rgba(227, 230, 230, 1) 100%
+    );
+  }
 
-{%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
-  {%- style -%}
+  .deep-slider-section:before {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 30rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(227, 230, 230, 0) 0%,
+      rgba(227, 230, 230, 1) 38%,
+      rgba(227, 230, 230, 1) 100%
+    );
+  }
+
+  {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
+  
     @media screen and (max-width: 749px) {
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
@@ -24,9 +52,8 @@
         display: block;
       }
     }
-  {%- endstyle -%}
-{%- endif -%}
-
+  {%- endif -%}
+{%- endstyle -%}
 <slideshow-component
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
   role="region"
