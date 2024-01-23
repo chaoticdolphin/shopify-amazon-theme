@@ -3588,8 +3588,14 @@ details-disclosure > details {
   }
 }
 
+/* ADDED CUSTOM */
+
+.page-width {
+  padding: 0 1.5rem;
+}
+
 .main-section {
-  margin-top: -65rem;
+  margin-top: -60rem;
   position: relative;
   z-index: 14;
   background: linear-gradient(
