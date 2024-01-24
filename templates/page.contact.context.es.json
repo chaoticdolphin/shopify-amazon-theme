@@ -1,0 +1,22 @@
+{
+  "parent": "page.contact.json",
+  "context": {
+    "market": "es"
+  },
+  "sections": {
+    "multicolumn_PneqTy": {
+      "settings": {
+        "title": "Sobre nosotros"
+      },
+      "blocks": {
+      }
+    },
+    "contact_form_RNLEHm": {
+      "settings": {
+        "heading": "Formulario de contacto"
+      },
+      "blocks": {
+      }
+    }
+  }
+}
